@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="network/london_filtered.net.xml"/>
+        <route-files value="routes/london.rou.xml"/>
+        <additional-files value="network/london.poly.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="data/raw/smoke_tripinfo.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+</configuration>

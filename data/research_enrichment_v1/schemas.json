@@ -1,0 +1,362 @@
+{
+  "trip_research_features": [
+    {
+      "name": "run_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "vehicle_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "persona",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "completed",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "name": "route_group_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "sample_count",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "name": "observed_time_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "observed_distance_km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "distance_coverage_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "time_coverage_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_trip_under_60s",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "name": "short_trip_under_1km",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "name": "speed_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "moving_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "stopped_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "leader_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "headway_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "closing_ttc_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_ratio_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_headway_sample_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "low_ttc_sample_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_exceedance_sample_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "headway_observation_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_headway_observable_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "low_ttc_closing_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_exceedance_observable_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "accel_rms_mps2",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "jerk_rms_mps3",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "acceleration_count_per_100km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "acceleration_count_per_observed_hour",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "braking_count_per_100km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "braking_count_per_observed_hour",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_speed_exceedance_count_per_100km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_speed_exceedance_count_per_observed_hour",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_headway_count_per_100km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_headway_count_per_observed_hour",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "longitudinal_near_miss_count_per_100km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "longitudinal_near_miss_count_per_observed_hour",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "lane_change_count_per_100km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "lane_change_count_per_observed_hour",
+      "type": "double",
+      "nullable": true
+    }
+  ],
+  "road_context_exposure": [
+    {
+      "name": "run_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "vehicle_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "persona",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "road_class",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "sample_count",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "name": "observed_time_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "observed_distance_km",
+      "type": "double",
+      "nullable": true
+    }
+  ],
+  "telemetry_missingness": [
+    {
+      "name": "run_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "column",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "rows",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "name": "null_count",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "name": "null_fraction",
+      "type": "double",
+      "nullable": true
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "name": "column",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "threshold_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "observable_time_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "below_threshold_time_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "below_threshold_fraction",
+      "type": "double",
+      "nullable": true
+    }
+  ],
+  "persona_exposure_summary": [
+    {
+      "name": "persona",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "trip_count",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "name": "observed_distance_km",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "observed_time_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "headway_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_headway_sample_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "closing_ttc_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "low_ttc_sample_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_ratio_observable_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_exceedance_sample_s",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "short_headway_observable_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "low_ttc_closing_fraction",
+      "type": "double",
+      "nullable": true
+    },
+    {
+      "name": "network_exceedance_observable_fraction",
+      "type": "double",
+      "nullable": true
+    }
+  ]
+}

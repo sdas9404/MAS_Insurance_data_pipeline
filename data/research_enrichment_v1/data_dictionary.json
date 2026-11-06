@@ -1,0 +1,642 @@
+{
+  "persona_exposure_summary": [
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "Configured uncalibrated synthetic behaviour profile, not a risk or outcome label.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "trip_count",
+      "arrow_type": "int64",
+      "unit": "count",
+      "description": "trip count",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observed_distance_km",
+      "arrow_type": "double",
+      "unit": "km",
+      "description": "Nonnegative distance increments over valid consecutive observation intervals / 1000.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observed_time_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Sum of valid consecutive intervals; first observations and gaps excluded.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "headway_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Time with a leader, nonnegative physical gap and defined nonnegative headway.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_headway_sample_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "short headway sample s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "closing_ttc_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Time with a leader, nonnegative physical gap and defined nonnegative closing TTC.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "low_ttc_sample_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "low ttc sample s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_ratio_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "network ratio observable s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_exceedance_sample_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "network exceedance sample s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_headway_observable_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time with headway below manifest threshold / valid headway observation time.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "low_ttc_closing_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time with closing TTC below manifest threshold / defined closing-TTC observation time.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_exceedance_observable_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time above manifest network-ratio threshold / time with a defined ratio. Network limits unverified.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    }
+  ],
+  "road_context_exposure": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "run id",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "vehicle_id",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "vehicle id",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "Configured uncalibrated synthetic behaviour profile, not a risk or outcome label.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "road_class",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "Original SUMO edge type; internal junction edges explicitly categorized internal.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "sample_count",
+      "arrow_type": "int64",
+      "unit": "count",
+      "description": "Number of observed telemetry rows, including first observations with zero interval exposure.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observed_time_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Sum of valid consecutive intervals; first observations and gaps excluded.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observed_distance_km",
+      "arrow_type": "double",
+      "unit": "km",
+      "description": "Nonnegative distance increments over valid consecutive observation intervals / 1000.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    }
+  ],
+  "telemetry_missingness": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "run id",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "column",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "column",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "rows",
+      "arrow_type": "int64",
+      "unit": "count",
+      "description": "rows",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "null_count",
+      "arrow_type": "int64",
+      "unit": "count",
+      "description": "null count",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "null_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Null samples / all physical-column samples for that run; undefined measures are expected to have nulls.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "name": "column",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "column",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "threshold_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Alternate cutoff used only for sensitivity analysis.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observable_time_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "observable time s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "below_threshold_time_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Sum of valid observation intervals with endpoint measure below threshold; no minimum episode duration.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "below_threshold_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time below threshold / valid time for this measure. Not an episode count.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    }
+  ],
+  "trip_research_features": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "run id",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "vehicle_id",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "vehicle id",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "Configured uncalibrated synthetic behaviour profile, not a risk or outcome label.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "completed",
+      "arrow_type": "bool",
+      "unit": "not applicable",
+      "description": "completed",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "route_group_id",
+      "arrow_type": "string",
+      "unit": "not applicable",
+      "description": "SHA256 of normalized route edge sequence; repeated-route dependence group, not a persistent real driver.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "sample_count",
+      "arrow_type": "int64",
+      "unit": "count",
+      "description": "Number of observed telemetry rows, including first observations with zero interval exposure.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observed_time_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Sum of valid consecutive intervals; first observations and gaps excluded.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "observed_distance_km",
+      "arrow_type": "double",
+      "unit": "km",
+      "description": "Nonnegative distance increments over valid consecutive observation intervals / 1000.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "distance_coverage_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Observed distance / authoritative TripInfo route distance; no clipping.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "time_coverage_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Observed time / authoritative TripInfo trip duration; no clipping.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_trip_under_60s",
+      "arrow_type": "bool",
+      "unit": "not applicable",
+      "description": "TripInfo duration <60 seconds; descriptive coverage flag only.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_trip_under_1km",
+      "arrow_type": "bool",
+      "unit": "not applicable",
+      "description": "TripInfo route distance <1000 metres; descriptive coverage flag only.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "speed_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "speed observable s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "moving_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Observed consecutive time with endpoint speed >0.1 m/s.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "stopped_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Observed consecutive time with endpoint speed <=0.1 m/s; differs from SUMO waiting definition.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "leader_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "leader observable s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "headway_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Time with a leader, nonnegative physical gap and defined nonnegative headway.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "closing_ttc_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "Time with a leader, nonnegative physical gap and defined nonnegative closing TTC.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_ratio_observable_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "network ratio observable s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_headway_sample_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "short headway sample s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "low_ttc_sample_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "low ttc sample s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_exceedance_sample_s",
+      "arrow_type": "double",
+      "unit": "s",
+      "description": "network exceedance sample s",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "headway_observation_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Valid headway time / total consecutive observation time.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_headway_observable_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time with headway below manifest threshold / valid headway observation time.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "low_ttc_closing_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time with closing TTC below manifest threshold / defined closing-TTC observation time.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_exceedance_observable_fraction",
+      "arrow_type": "double",
+      "unit": "dimensionless",
+      "description": "Sampled time above manifest network-ratio threshold / time with a defined ratio. Network limits unverified.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "accel_rms_mps2",
+      "arrow_type": "double",
+      "unit": "m/s^2",
+      "description": "sqrt(sum(acceleration squared * valid dt) / acceleration-valid time).",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "jerk_rms_mps3",
+      "arrow_type": "double",
+      "unit": "m/s^3",
+      "description": "sqrt(sum(jerk squared * valid dt) / jerk-valid time).",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "acceleration_count_per_100km",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / 100 observed km",
+      "description": "Original acceleration_count * 100 / observed kilometres.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "acceleration_count_per_observed_hour",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / observed hour",
+      "description": "Original acceleration_count * 3600 / observed seconds.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "braking_count_per_100km",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / 100 observed km",
+      "description": "Original braking_count * 100 / observed kilometres.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "braking_count_per_observed_hour",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / observed hour",
+      "description": "Original braking_count * 3600 / observed seconds.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_speed_exceedance_count_per_100km",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / 100 observed km",
+      "description": "Original network_speed_exceedance_count * 100 / observed kilometres.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "network_speed_exceedance_count_per_observed_hour",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / observed hour",
+      "description": "Original network_speed_exceedance_count * 3600 / observed seconds.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_headway_count_per_100km",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / 100 observed km",
+      "description": "Original short_headway_count * 100 / observed kilometres.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "short_headway_count_per_observed_hour",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / observed hour",
+      "description": "Original short_headway_count * 3600 / observed seconds.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "longitudinal_near_miss_count_per_100km",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / 100 observed km",
+      "description": "Original longitudinal_near_miss_count * 100 / observed kilometres.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "longitudinal_near_miss_count_per_observed_hour",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / observed hour",
+      "description": "Original longitudinal_near_miss_count * 3600 / observed seconds.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "lane_change_count_per_100km",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / 100 observed km",
+      "description": "Original lane_change_count * 100 / observed kilometres.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    },
+    {
+      "name": "lane_change_count_per_observed_hour",
+      "arrow_type": "double",
+      "unit": "episodes or lane changes / observed hour",
+      "description": "Original lane_change_count * 3600 / observed seconds.",
+      "nullable": true,
+      "missingness": "Null for unavailable source data or zero denominator; zero denotes an observed zero.",
+      "provenance": "Original experiment Parquet and manifest, plus hash-verified SUMO network. See README.md for derivations."
+    }
+  ]
+}

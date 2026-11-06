@@ -1,0 +1,31 @@
+{
+  "source": "C:\\Users\\suman\\MAS-Insurance_data_pipeline\\data\\experiments\\balanced_12",
+  "row_counts": {
+    "trip_research_features": 3600,
+    "road_context_exposure": 12660,
+    "telemetry_missingness": 300,
+    "threshold_sensitivity": 7,
+    "persona_exposure_summary": 12
+  },
+  "telemetry_rows": 1671909,
+  "anomalies": {},
+  "unique_route_groups": 300,
+  "short_trip_under_60s_count": 179,
+  "short_trip_under_1km_count": 384,
+  "no_headway_observation_trip_count": 649,
+  "no_closing_ttc_observation_trip_count": 803,
+  "checks": [
+    "one-to-one expected trip joins",
+    "independent reconstruction matches original exposure",
+    "Parquet row count readback"
+  ],
+  "thresholds": {
+    "acceleration": 3.0,
+    "braking": -4.5,
+    "network_speed_ratio": 1.05,
+    "headway_s": 1.0,
+    "ttc_s": 1.5,
+    "minimum_episode_s": 1.0
+  },
+  "source_artifacts_unchanged": true
+}

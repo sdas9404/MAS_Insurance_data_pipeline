@@ -9,3 +9,12 @@ data/quality/
 logs/
 
 .env
+
+# Generated handoff bundles stay local; recreate them with package_handoff.py.
+/PhD_SUMO_Handoff/
+/PhD_SUMO_Handoff*.zip
+/PhD_SUMO_Handoff*.zip.sha256
+
+# Disposable pytest outputs and local maintenance helpers.
+/data/test_temp*/
+/pytest-cache-files-*/

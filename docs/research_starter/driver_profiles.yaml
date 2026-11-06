@@ -1,0 +1,290 @@
+# Exploratory research design, not empirical calibration.
+# All numeric two-element lists represent inclusive uniform sampling ranges.
+project: SE4457 MAS synthetic driving telemetry research
+configuration_version: proposal-0.1
+warning: Exploratory, uncalibrated simulator settings. Validate model/parameter support
+  and bounds with installed SUMO 1.28.0. No measured crash or insurance risk labels.
+simulation:
+  step_length_s: 0.5
+  car_follow_model: Krauss
+  lane_change_model: LC2013
+  replications: 12
+  route_vehicles: 300
+  base_seed: 1001
+sampler:
+  method: seeded_uniform_individual_per_vehicle
+  one_unique_vType_per_vehicle: true
+  apparentDecel: set equal to sampled decel
+  emergencyDecel: 9.0 m/s^2 fixed, greater than all decel bounds
+  constraints:
+  - tau >= actionStepLength for every individual (after step rounding)
+  - all sampled parameters have valid SUMO 1.28.0 ranges
+  - vClass passenger; preserve existing OD and depart
+  - record each sampled value in driver_parameters.parquet
+  - do not assign age or insurance-risk labels
+default_ranges:
+  speedFactor:
+  - 0.95
+  - 1.05
+  accel:
+  - 2.4
+  - 2.8
+  decel:
+  - 4.2
+  - 4.8
+  tau:
+  - 1.1
+  - 1.5
+  minGap:
+  - 2.2
+  - 2.8
+  sigma:
+  - 0.35
+  - 0.55
+  actionStepLength:
+  - 0.5
+  - 0.5
+  startupDelay:
+  - 0
+  - 0
+  lcStrategic:
+  - 0.9
+  - 1.1
+  lcSpeedGain:
+  - 0.8
+  - 1.2
+  lcCooperative:
+  - 0.9
+  - 1.0
+  lcKeepRight:
+  - 0.8
+  - 1.2
+  lcAssertive:
+  - 0.9
+  - 1.1
+  lcOvertakeRight:
+  - 0
+  - 0
+profiles:
+  baseline: {}
+  cautious:
+    speedFactor:
+    - 0.82
+    - 0.96
+    accel:
+    - 1.6
+    - 2.3
+    tau:
+    - 1.6
+    - 2.3
+    minGap:
+    - 3.0
+    - 4.5
+    sigma:
+    - 0.1
+    - 0.3
+    lcSpeedGain:
+    - 0.35
+    - 0.75
+    lcAssertive:
+    - 0.65
+    - 0.9
+  defensive:
+    speedFactor:
+    - 0.91
+    - 1.01
+    tau:
+    - 1.6
+    - 2.2
+    minGap:
+    - 3.0
+    - 4.2
+    sigma:
+    - 0.05
+    - 0.25
+    lcCooperative:
+    - 0.95
+    - 1
+    lcStrategic:
+    - 1.1
+    - 1.6
+    lcSpeedGain:
+    - 0.6
+    - 0.9
+  smooth_consistent:
+    speedFactor:
+    - 0.94
+    - 1.05
+    accel:
+    - 1.6
+    - 2.2
+    decel:
+    - 3.4
+    - 4.4
+    sigma:
+    - 0.05
+    - 0.2
+    tau:
+    - 1.3
+    - 1.7
+    lcSpeedGain:
+    - 0.7
+    - 1.0
+  speed_prone:
+    speedFactor:
+    - 1.12
+    - 1.3
+    accel:
+    - 2.7
+    - 3.4
+    tau:
+    - 1.1
+    - 1.5
+    lcSpeedGain:
+    - 1.1
+    - 1.7
+    lcOvertakeRight:
+    - 0.02
+    - 0.08
+  aggressive:
+    speedFactor:
+    - 1.1
+    - 1.3
+    accel:
+    - 3.0
+    - 4.0
+    decel:
+    - 4.8
+    - 6.0
+    tau:
+    - 0.7
+    - 1.1
+    minGap:
+    - 1.0
+    - 2.0
+    sigma:
+    - 0.4
+    - 0.7
+    lcSpeedGain:
+    - 1.5
+    - 2.8
+    lcCooperative:
+    - 0.2
+    - 0.6
+    lcAssertive:
+    - 1.2
+    - 2.0
+  tailgater:
+    speedFactor:
+    - 0.99
+    - 1.12
+    tau:
+    - 0.6
+    - 0.95
+    minGap:
+    - 0.8
+    - 1.8
+    sigma:
+    - 0.3
+    - 0.6
+    lcAssertive:
+    - 1.0
+    - 1.4
+  frequent_lane_changer:
+    speedFactor:
+    - 1.03
+    - 1.15
+    lcSpeedGain:
+    - 2.0
+    - 3.0
+    lcStrategic:
+    - 1.4
+    - 2.2
+    lcCooperative:
+    - 0.5
+    - 0.85
+    lcAssertive:
+    - 1.3
+    - 1.9
+    lcOvertakeRight:
+    - 0.05
+    - 0.15
+  impatient:
+    speedFactor:
+    - 1.02
+    - 1.15
+    accel:
+    - 2.8
+    - 3.5
+    tau:
+    - 1.0
+    - 1.3
+    lcSpeedGain:
+    - 1.6
+    - 2.5
+    lcCooperative:
+    - 0.3
+    - 0.7
+    lcAssertive:
+    - 1.2
+    - 1.6
+    lcStrategic:
+    - 1.2
+    - 2.0
+  erratic:
+    speedFactor:
+    - 0.85
+    - 1.25
+    sigma:
+    - 0.75
+    - 1.0
+    accel:
+    - 2.0
+    - 3.7
+    tau:
+    - 1.1
+    - 1.7
+    lcSpeedGain:
+    - 0.7
+    - 2.0
+    lcAssertive:
+    - 0.8
+    - 1.7
+  delayed_response:
+    speedFactor:
+    - 0.92
+    - 1.06
+    actionStepLength:
+    - 1.5
+    - 1.5
+    tau:
+    - 1.7
+    - 2.3
+    minGap:
+    - 2.7
+    - 4.0
+    sigma:
+    - 0.4
+    - 0.7
+  hesitant:
+    speedFactor:
+    - 0.82
+    - 0.97
+    accel:
+    - 1.3
+    - 2.0
+    tau:
+    - 1.5
+    - 2.2
+    minGap:
+    - 2.8
+    - 4.0
+    startupDelay:
+    - 0.5
+    - 2.0
+    lcSpeedGain:
+    - 0.3
+    - 0.7
+    lcAssertive:
+    - 0.65
+    - 0.9

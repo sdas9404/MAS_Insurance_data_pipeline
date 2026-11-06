@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "assignment_rows": 300,
+  "trip_rows": 300,
+  "telemetry_rows": 139228,
+  "jerk_values_checked": 138928,
+  "observed_driver_parameters_checked": 300,
+  "checks": [
+    "unique telemetry composite keys",
+    "trip joins",
+    "per-run persona balance",
+    "cyclic coverage when 12 runs",
+    "runtime parameter comparisons",
+    "numerical jerk",
+    "unique partition paths"
+  ]
+}

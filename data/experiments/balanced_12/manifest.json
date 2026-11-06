@@ -1,0 +1,34 @@
+{
+  "arguments": {
+    "runs": 12,
+    "seed": 1001,
+    "step_length": 0.5,
+    "max_time": 3600,
+    "sumo": "C:\\Program Files (x86)\\SUMO\\bin\\sumo.EXE",
+    "config": "C:\\Users\\suman\\MAS-Insurance_data_pipeline\\config\\driver_profiles.yaml",
+    "output": "data\\experiments\\balanced_12",
+    "acceleration": 3.0,
+    "braking": -4.5,
+    "network_speed_ratio": 1.05,
+    "headway_s": 1.0,
+    "ttc_s": 1.5,
+    "minimum_episode_s": 1.0
+  },
+  "input_hashes": {
+    "network/london_filtered.net.xml": "2f50a8a2954cf936bed9521903c11de86186850f14b519f33cb7f05b53bb786c",
+    "routes/london.rou.xml": "d780ac28c3789fee5f8714c2c6e35530cf1e54426a70b7ba14912c077b710e4f",
+    "london.sumocfg": "03d2d34dd3bcb91bc677d8b4c7fd155b772b1b66fab8498098ac2bcfb7cefffd",
+    "data/raw/smoke_tripinfo.xml": "117b325d506bcb701222d2bf77b823073c9c2480bac712d39b791cdd8530db8e"
+  },
+  "installed_schema_sha256": "7a70ea457cbec1a5e1f2d0bedef0d10ae42bace53c16a7e89fed130b5fda01ee",
+  "parameter_validation": "installed XSD + SUMO --xml-validation always + departure TraCI getter comparison",
+  "ssm": "Not enabled; longitudinal TTC is not SSM TTC/DRAC/PET",
+  "thresholds": {
+    "acceleration": 3.0,
+    "braking": -4.5,
+    "network_speed_ratio": 1.05,
+    "headway_s": 1.0,
+    "ttc_s": 1.5,
+    "minimum_episode_s": 1.0
+  }
+}

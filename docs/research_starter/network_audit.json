@@ -1,0 +1,64 @@
+{
+  "source_file": "london_filtered.net.xml",
+  "sha256": "2f50a8a2954cf936bed9521903c11de86186850f14b519f33cb7f05b53bb786c",
+  "sumo_netconvert_version": "1.28.0",
+  "coordinate_system": "+proj=utm +zone=17 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+  "net_bounds_m": "0.00,0.00,4329.02,3269.19",
+  "original_bounds_lonlat": "-81.328417,42.981366,-81.235377,43.022736",
+  "non_internal_edges": 733,
+  "non_internal_lanes": 967,
+  "junctions_excluding_internal": 299,
+  "junctions_by_type": {
+    "priority": 246,
+    "traffic_light": 46,
+    "dead_end": 5,
+    "right_before_left": 2,
+    "internal": 583
+  },
+  "traffic_light_logics": 46,
+  "non_internal_edges_by_class": {
+    "highway.tertiary": 158,
+    "highway.residential": 361,
+    "highway.secondary": 210,
+    "highway.unclassified": 2,
+    "highway.secondary_link": 2
+  },
+  "non_internal_road_length_m_by_class": {
+    "highway.tertiary": 26340.61000000001,
+    "highway.residential": 54798.58000000001,
+    "highway.secondary": 19182.839999999997,
+    "highway.unclassified": 163.94,
+    "highway.secondary_link": 23.71
+  },
+  "lane_speed_kmh_counts": {
+    "80": 155,
+    "50": 786,
+    "40": 16,
+    "60": 10
+  },
+  "lane_speed_kmh_by_road_class": {
+    "highway.tertiary": {
+      "80": 153,
+      "40": 16
+    },
+    "highway.residential": {
+      "50": 374
+    },
+    "highway.secondary": {
+      "50": 410,
+      "60": 10
+    },
+    "highway.unclassified": {
+      "50": 2
+    },
+    "highway.secondary_link": {
+      "80": 2
+    }
+  },
+  "service_road_edges": 0,
+  "warnings": [
+    "153 tertiary-road lanes are set at 80 km/h; verify against authoritative posted limits before using speeding features.",
+    "Traffic-light counts do not validate signal timings.",
+    "Weak graph connectivity does not guarantee every OD pair is routable; baseline 300/300 tripinfo is favorable but route-specific."
+  ]
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-06T01:52:38.865772-05:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\suman\MAS-Insurance_data_pipeline\network\london_filtered.net.xml"/>
+        <route-files value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\scenario.rou.xml"/>
+        <additional-files value="C:\Users\suman\MAS-Insurance_data_pipeline\network\london.poly.xml"/>
+    </input>
+
+    <output>
+        <precision value="10"/>
+        <tripinfo-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <lanechange-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\lanechanges.xml"/>
+        <collision-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\collisions.xml"/>
+        <statistic-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\statistics.xml"/>
+    </output>
+
+    <time>
+        <step-length value="0.5"/>
+    </time>
+
+    <report>
+        <xml-validation value="always"/>
+        <log value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\sumo.log"/>
+        <error-log value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\warnings.log"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="62435"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="1753259845"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+    <tripinfo id="0" depart="0.000" departLane="237295592#0_0" departPos="5.1000000000" departSpeed="22.2200000000" departDelay="0.000" arrival="-1.000" arrivalLane="" arrivalPos="-1.0000000000" arrivalSpeed="-1.0000000000" duration="0.500" routeLength="0.0000000000" waitingTime="0.000" waitingCount="0" stopTime="0.000" timeLoss="0.000" rerouteNo="0" devices="tripinfo_0" vType="individual_0" speedFactor="1.0394607271" vaporized="end"/>
+</tripinfos>

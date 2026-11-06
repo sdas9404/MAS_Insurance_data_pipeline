@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-06T02:08:29.229069-05:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\suman\MAS-Insurance_data_pipeline\network\london_filtered.net.xml"/>
+        <route-files value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\scenario.rou.xml"/>
+        <additional-files value="C:\Users\suman\MAS-Insurance_data_pipeline\network\london.poly.xml"/>
+    </input>
+
+    <output>
+        <precision value="10"/>
+        <tripinfo-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <lanechange-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\lanechanges.xml"/>
+        <collision-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\collisions.xml"/>
+        <statistic-output value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\statistics.xml"/>
+    </output>
+
+    <time>
+        <step-length value="0.5"/>
+    </time>
+
+    <processing>
+        <step-method.ballistic value="true"/>
+    </processing>
+
+    <report>
+        <xml-validation value="always"/>
+        <log value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\sumo.log"/>
+        <error-log value="C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\balanced_12\raw\run_0007\warnings.log"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="60423"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="1052854876"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<statistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/statistic_file.xsd">
+    <performance clockBegin="192799.894" clockEnd="192822.757" clockDuration="22.863" traciDuration="20.922" realTimeFactor="67.5764335389" vehicleUpdatesPerSecond="5993.7890915453" personUpdatesPerSecond="0.0000000000" begin="0.000" end="1545.000" duration="1545.000"/>
+    <vehicles loaded="300" inserted="300" running="0" waiting="0"/>
+    <teleports total="0" jam="0" yield="0" wrongLane="0"/>
+    <safety collisions="0" emergencyStops="0" emergencyBraking="0"/>
+    <persons loaded="0" running="0" jammed="0"/>
+    <personTeleports total="0" abortWait="0" wrongDest="0"/>
+    <vehicleTripStatistics count="300" routeLength="2301.5899000000" speed="10.6548633983" duration="228.3930000000" waitingTime="53.4600000000" timeLoss="82.8080000000" departDelay="2.2160000000" departDelayWaiting="0.0000000000" totalTravelTime="68518.000" totalDepartDelay="665.000"/>
+    <pedestrianStatistics number="0" routeLength="0.0000000000" duration="0.0000000000" timeLoss="0.0000000000"/>
+    <rideStatistics number="0"/>
+    <transportStatistics number="0"/>
+</statistics>

@@ -1,0 +1,18 @@
+***Starting server on port 62435 ***
+Loading net-file from 'C:\Users\suman\MAS-Insurance_data_pipeline\network\london_filtered.net.xml' ... done (154ms).
+Loading additional-files from 'C:\Users\suman\MAS-Insurance_data_pipeline\network\london.poly.xml' ... done (495ms).
+Loading route-files incrementally from 'C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke\raw\run_0001\scenario.rou.xml'
+Loading done.
+Warning: Action step length '1.5000000000' is used for vehicle type 'individual_10' but step-method.ballistic was not set. Setting it now to avoid collisions.
+Simulation version 1.28.0 started with time: 0.000.
+Simulation ended at time: 0.500.
+Reason: TraCI requested termination.
+Performance:
+ Duration: 1.034s
+ TraCI-Duration: 0.009s
+ Real time factor: 0.483559
+ UPS: 0.967118
+Vehicles:
+ Inserted: 1 (Loaded: 2)
+ Running: 1
+ Waiting: 0

@@ -1,0 +1,17 @@
+***Starting server on port 62441 ***
+Loading net-file from 'C:\Users\suman\MAS-Insurance_data_pipeline\network\london_filtered.net.xml' ... done (133ms).
+Loading additional-files from 'C:\Users\suman\MAS-Insurance_data_pipeline\network\london.poly.xml' ... done (431ms).
+Loading route-files incrementally from 'C:\Users\suman\MAS-Insurance_data_pipeline\data\experiments\smoke_verified\raw\run_0001\scenario.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.000.
+Simulation ended at time: 1636.500.
+Reason: TraCI requested termination.
+Performance:
+ Duration: 32.328s
+ TraCI-Duration: 29.953s
+ Real time factor: 50.6218
+ UPS: 4306.731007
+Vehicles:
+ Inserted: 300
+ Running: 0
+ Waiting: 0

@@ -1,0 +1,6 @@
+{
+  "command": ".venv/Scripts/python.exe -m pytest -q tests/test_enrichment.py tests/test_pipeline.py -k \"not validation and not assignment_sampling_xml and not individual_variation and not named_route_and_children\" -p no:cacheprovider",
+  "passed": 9,
+  "deselected": 4,
+  "new_enrichment_tests_passed": 5
+}

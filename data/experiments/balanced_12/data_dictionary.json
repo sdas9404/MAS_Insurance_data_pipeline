@@ -1,0 +1,1155 @@
+{
+  "driver_parameters": [
+    {
+      "name": "vehicle_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "vehicle id",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "persona",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "route_id",
+      "arrow_type": "null",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "Original route reference/inline ID; null for anonymous inline route; never synthesized.",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "route_edges",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "Original inline route edge sequence; null when vehicle uses a named route reference.",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "original_type",
+      "arrow_type": "null",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "original type",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "planned_depart_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "planned depart s",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "sampling_seed",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "sampling seed",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "speedFactor",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "speedFactor",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "accel",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s^2",
+      "description": "accel",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "decel",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s^2",
+      "description": "decel",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "tau",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "tau",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "minGap",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "minGap",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "sigma",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "sigma",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "actionStepLength",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "actionStepLength",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "startupDelay",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "Configured delay before starting after a stop; runtime getter unavailable in installed SUMO 1.28.",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lcStrategic",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "lcStrategic",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lcSpeedGain",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "lcSpeedGain",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lcCooperative",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "lcCooperative",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lcKeepRight",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "lcKeepRight",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lcAssertive",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "lcAssertive",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lcOvertakeRight",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "lcOvertakeRight",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "apparentDecel",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s^2",
+      "description": "apparentDecel",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "emergencyDecel",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s^2",
+      "description": "emergencyDecel",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "run id",
+      "provenance": "Seeded per-driver configuration and original route XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    }
+  ],
+  "driving_events": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "run id",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "vehicle_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "vehicle id",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "persona",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "event_type",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "event type",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "lane id",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "edge_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "edge id",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "reason",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "reason",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "start_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "Beginning of first qualifying sample interval; lane changes use official timestamp.",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "end_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "End of last qualifying sample interval; lane changes use official timestamp.",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "TripInfo duration for trips; accumulated qualifying sample time for events.",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "peak_value",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "Maximum acceleration, braking magnitude, speed ratio, inverse headway (1/s) or inverse TTC (1/s), conditional on event_type; null for lane changes.",
+      "provenance": "Threshold episode detector or official lanechange XML",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    }
+  ],
+  "simulation_runs": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "run id",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "scenario_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "scenario id",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "sumo_version",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "sumo version",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "base_seed",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "base seed",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "assignment_seed",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "assignment seed",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "sumo_seed",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "sumo seed",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "step_length_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "step length s",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "expected_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "expected count",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "departed_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "departed count",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "arrived_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "arrived count",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "incomplete_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "Expected count minus arrived count, including vehicles not departed.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "not_departed_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "not departed count",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "failed_departures_count",
+      "arrow_type": "null",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "Null: pending vehicles at cap do not establish failed departure.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "teleported_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "Distinct vehicles with at least one observed starting teleport.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "teleport_event_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "teleport event count",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "collision_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "Number of official SUMO collision XML records.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "colliding_vehicle_step_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "Sum of colliding vehicles per step; may count a vehicle more than once.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "truncated",
+      "arrow_type": "bool",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "True if cap reached with expected trips incomplete.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "end_time_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "end time s",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "runtime_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "runtime s",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "os",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "os",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "network_sha256",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "network sha256",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "route_sha256",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "route sha256",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "network_speed_status",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "unverified for supplied network: road legal limits not independently established.",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "scenario_sha256",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "scenario sha256",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "config_sha256",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "config sha256",
+      "provenance": "Execution manifest, source hashes and observed simulation counters",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    }
+  ],
+  "trip_summary": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "run id",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "vehicle_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "vehicle id",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "persona",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "completed",
+      "arrow_type": "bool",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "completed",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "departed",
+      "arrow_type": "bool",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "departed",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "teleported",
+      "arrow_type": "bool",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "teleported",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "teleport_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "teleport count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "status",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "completed, incomplete (departed but not arrived), or not_departed_by_cap.",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "exposed_time_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "Time between consecutive observed states; excludes insertion, arrival and teleport gaps.",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "exposed_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "km",
+      "description": "Nonnegative distance increments between consecutive observed states / 1000.",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "distance_weighted_speed_ratio",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "Sum(observed distance increment * speed/lane limit) / valid observed distance.",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "depart_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "depart s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "arrival_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "arrival s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "TripInfo duration for trips; accumulated qualifying sample time for events.",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "route_distance_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "route distance m",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "waiting_time_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "waiting time s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "time_loss_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "time loss s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "depart_delay_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "depart delay s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "median_speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "median speed mps",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "p95_speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "p95 speed mps",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "mean_speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "mean speed mps",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "max_speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "max speed mps",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "acceleration_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "acceleration count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "acceleration_duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "acceleration duration s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "acceleration_per_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1/km",
+      "description": "acceleration per km",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "braking_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "braking count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "braking_duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "braking duration s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "braking_per_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1/km",
+      "description": "braking per km",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "network_speed_exceedance_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "network speed exceedance count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "network_speed_exceedance_duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "network speed exceedance duration s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "network_speed_exceedance_per_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1/km",
+      "description": "network speed exceedance per km",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "short_headway_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "short headway count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "short_headway_duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "short headway duration s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "short_headway_per_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1/km",
+      "description": "short headway per km",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "longitudinal_near_miss_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "longitudinal near miss count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "longitudinal_near_miss_duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "longitudinal near miss duration s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "longitudinal_near_miss_per_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1/km",
+      "description": "longitudinal near miss per km",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_change_count",
+      "arrow_type": "int64",
+      "nullable": true,
+      "unit": "1",
+      "description": "lane change count",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_change_duration_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "lane change duration s",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_change_per_km",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1/km",
+      "description": "lane change per km",
+      "provenance": "Authoritative TripInfo left join with sampled exposure and episodes",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    }
+  ],
+  "telemetry": [
+    {
+      "name": "run_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "run id",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "vehicle_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "vehicle id",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "persona",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "persona",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "lane id",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "edge_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "edge id",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "leader_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "leader id",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "upcoming_tls_id",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "upcoming tls id",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "upcoming_tls_state",
+      "arrow_type": "string",
+      "nullable": true,
+      "unit": "not applicable",
+      "description": "Observed next signal link state; does not establish an infraction.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_index",
+      "arrow_type": "int32",
+      "nullable": true,
+      "unit": "1",
+      "description": "lane index",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "time_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "time s",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "speed mps",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "accel_mps2",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s^2",
+      "description": "accel mps2",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "jerk_mps3",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s^3",
+      "description": "Consecutive acceleration difference / simulation step; null after insertion or sampling gap.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_position_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "lane position m",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "x_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "x m",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "y_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "y m",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "distance_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "distance m",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "lane_max_speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "lane max speed mps",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "speed_to_lane_limit_ratio",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "1",
+      "description": "speed to lane limit ratio",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "leader_gap_sumo_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "TraCI getLeader distance excluding ego minGap; leader search minimum lookahead 200 m.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "leader_gap_physical_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "SUMO leader gap plus individually sampled ego minGap; physical bumper gap.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "leader_speed_mps",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m/s",
+      "description": "leader speed mps",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "time_headway_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "Physical bumper gap / positive ego speed; null at zero speed or without leader.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "longitudinal_ttc_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "Physical gap / positive closing speed; null for no leader, nonclosing leader or negative physical gap.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "current_waiting_time_s",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "s",
+      "description": "TraCI current consecutive waiting time; not cumulative TripInfo waitingTime.",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    },
+    {
+      "name": "upcoming_tls_distance_m",
+      "arrow_type": "double",
+      "nullable": true,
+      "unit": "m",
+      "description": "upcoming tls distance m",
+      "provenance": "TraCI post-step subscription/API; derived fields per methodology",
+      "missingness": "Null when unavailable or undefined; see data_quality.json for actual counts. Zero denotes an observed value/count, never a missing-value replacement."
+    }
+  ]
+}
